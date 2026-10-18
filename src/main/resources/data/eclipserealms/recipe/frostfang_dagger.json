@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "V",
+    "B",
+    "/"
+  ],
+  "key": {
+    "V": {
+      "item": "eclipserealms:void_crystal_shard"
+    },
+    "B": {
+      "item": "minecraft:blue_ice"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "eclipserealms:frostfang_dagger",
+    "count": 1
+  }
+}

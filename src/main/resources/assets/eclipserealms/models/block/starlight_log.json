@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "eclipserealms:block/starlight_log_top",
+    "side": "eclipserealms:block/starlight_log"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "eclipserealms:block/starlight_log"
+    },
+    "axis=z": {
+      "model": "eclipserealms:block/starlight_log_horizontal",
+      "x": 90
+    },
+    "axis=x": {
+      "model": "eclipserealms:block/starlight_log_horizontal",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "eclipserealms:umbral_stone",
+    "eclipserealms:umbral_bricks",
+    "eclipserealms:void_crystal_ore",
+    "eclipserealms:void_crystal_block",
+    "eclipserealms:luminite_cluster",
+    "eclipserealms:eclipse_portal"
+  ]
+}

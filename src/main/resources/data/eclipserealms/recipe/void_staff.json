@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "VLV",
+    " / ",
+    " / "
+  ],
+  "key": {
+    "V": {
+      "item": "eclipserealms:void_crystal_shard"
+    },
+    "L": {
+      "item": "eclipserealms:luminite_cluster"
+    },
+    "/": {
+      "item": "minecraft:blaze_rod"
+    }
+  },
+  "result": {
+    "id": "eclipserealms:void_staff",
+    "count": 1
+  }
+}

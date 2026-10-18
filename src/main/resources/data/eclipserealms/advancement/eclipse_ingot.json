@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "id": "eclipserealms:eclipse_ingot"
+    },
+    "title": {
+      "translate": "advancement.eclipserealms.eclipse_ingot"
+    },
+    "description": {
+      "translate": "advancement.eclipserealms.eclipse_ingot.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "eclipserealms:eclipse_ingot"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "eclipserealms:void_crystal"
+}

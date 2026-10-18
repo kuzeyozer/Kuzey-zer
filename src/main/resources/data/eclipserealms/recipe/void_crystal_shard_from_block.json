@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "eclipserealms:void_crystal_block"
+    }
+  ],
+  "result": {
+    "id": "eclipserealms:void_crystal_shard",
+    "count": 9
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "eclipserealms:starlight_log"
+    }
+  ],
+  "result": {
+    "id": "eclipserealms:starlight_planks",
+    "count": 4
+  }
+}

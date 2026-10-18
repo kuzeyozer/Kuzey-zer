@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "EEE",
+    "ELE",
+    " / "
+  ],
+  "key": {
+    "E": {
+      "item": "eclipserealms:eclipse_ingot"
+    },
+    "L": {
+      "item": "minecraft:lightning_rod"
+    },
+    "/": {
+      "item": "minecraft:blaze_rod"
+    }
+  },
+  "result": {
+    "id": "eclipserealms:stormbreaker",
+    "count": 1
+  }
+}

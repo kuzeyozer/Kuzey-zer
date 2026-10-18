@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "eclipserealms:umbral_stone",
+    "eclipserealms:duskmoss",
+    "eclipserealms:ash_block",
+    "eclipserealms:void_crystal_ore"
+  ]
+}

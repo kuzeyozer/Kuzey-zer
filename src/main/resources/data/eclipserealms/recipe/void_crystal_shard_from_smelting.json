@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": {
+    "item": "eclipserealms:void_crystal_ore"
+  },
+  "result": {
+    "id": "eclipserealms:void_crystal_shard"
+  },
+  "experience": 1.0,
+  "cookingtime": 200
+}

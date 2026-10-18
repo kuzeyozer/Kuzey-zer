@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "id": "eclipserealms:void_crystal_shard"
+    },
+    "title": {
+      "translate": "advancement.eclipserealms.void_crystal"
+    },
+    "description": {
+      "translate": "advancement.eclipserealms.void_crystal.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "shard": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "eclipserealms:void_crystal_shard"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "eclipserealms:enter_eclipse"
+}

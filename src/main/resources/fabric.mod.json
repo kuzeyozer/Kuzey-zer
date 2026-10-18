@@ -1,0 +1,22 @@
+{
+	"schemaVersion": 1,
+	"id": "eclipserealms",
+	"version": "${version}",
+	"name": "Eclipse Realms",
+	"description": "Open a rift into the Eclipse - an eternally dark dimension with five new biomes, glowing starlight forests, void crystals and seven legendary weapons with special abilities.",
+	"authors": ["Kuzey Özer"],
+	"contact": {},
+	"license": "MIT",
+	"icon": "assets/eclipserealms/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["com.kuzey.eclipserealms.EclipseRealms"],
+		"client": ["com.kuzey.eclipserealms.client.EclipseRealmsClient"]
+	},
+	"depends": {
+		"fabricloader": ">=0.16.0",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}

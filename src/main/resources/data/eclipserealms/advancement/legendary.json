@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "id": "eclipserealms:eclipse_greatsword"
+    },
+    "title": {
+      "translate": "advancement.eclipserealms.legendary"
+    },
+    "description": {
+      "translate": "advancement.eclipserealms.legendary.desc"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "weapon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "eclipserealms:eclipse_greatsword",
+              "eclipserealms:stormbreaker",
+              "eclipserealms:ember_scythe"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "eclipserealms:eclipse_ingot"
+}

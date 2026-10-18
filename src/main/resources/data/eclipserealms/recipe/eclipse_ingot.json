@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "eclipserealms:void_crystal_shard"
+    },
+    {
+      "item": "eclipserealms:void_crystal_shard"
+    },
+    {
+      "item": "eclipserealms:void_crystal_shard"
+    },
+    {
+      "item": "eclipserealms:void_crystal_shard"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "eclipserealms:luminite_cluster"
+    }
+  ],
+  "result": {
+    "id": "eclipserealms:eclipse_ingot",
+    "count": 1
+  }
+}

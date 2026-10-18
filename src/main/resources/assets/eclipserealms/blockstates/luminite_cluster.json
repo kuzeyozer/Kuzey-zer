@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=up": {
+      "model": "eclipserealms:block/luminite_cluster"
+    },
+    "facing=down": {
+      "model": "eclipserealms:block/luminite_cluster",
+      "x": 180
+    },
+    "facing=north": {
+      "model": "eclipserealms:block/luminite_cluster",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "eclipserealms:block/luminite_cluster",
+      "x": 90,
+      "y": 180
+    },
+    "facing=east": {
+      "model": "eclipserealms:block/luminite_cluster",
+      "x": 90,
+      "y": 90
+    },
+    "facing=west": {
+      "model": "eclipserealms:block/luminite_cluster",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

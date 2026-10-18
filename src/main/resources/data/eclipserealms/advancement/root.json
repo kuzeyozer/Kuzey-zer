@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "id": "eclipserealms:eclipse_portal"
+    },
+    "title": {
+      "translate": "advancement.eclipserealms.root"
+    },
+    "description": {
+      "translate": "advancement.eclipserealms.root.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/block/deepslate_bricks.png"
+  },
+  "criteria": {
+    "has_portal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "eclipserealms:eclipse_portal"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

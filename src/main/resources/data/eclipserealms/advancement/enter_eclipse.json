@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "eclipserealms:umbral_stone"
+    },
+    "title": {
+      "translate": "advancement.eclipserealms.enter_eclipse"
+    },
+    "description": {
+      "translate": "advancement.eclipserealms.enter_eclipse.desc"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "entered": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "eclipserealms:eclipse"
+      }
+    }
+  },
+  "parent": "eclipserealms:root"
+}

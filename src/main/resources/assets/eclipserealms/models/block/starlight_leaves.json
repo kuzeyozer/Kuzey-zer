@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "eclipserealms:block/starlight_leaves"
+  }
+}

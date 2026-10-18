@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "eclipserealms:void_crystal_shard"
+    }
+  },
+  "result": {
+    "id": "eclipserealms:void_crystal_block",
+    "count": 1
+  }
+}

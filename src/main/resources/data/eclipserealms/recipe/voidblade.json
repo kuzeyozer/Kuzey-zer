@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "V",
+    "V",
+    "/"
+  ],
+  "key": {
+    "V": {
+      "item": "eclipserealms:void_crystal_shard"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "eclipserealms:voidblade",
+    "count": 1
+  }
+}
