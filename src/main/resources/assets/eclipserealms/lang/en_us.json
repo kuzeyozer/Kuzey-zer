@@ -77,5 +77,11 @@
   "advancement.eclipserealms.eclipse_stand": "Altar of Forging",
   "advancement.eclipserealms.eclipse_stand.desc": "Craft an Eclipse Stand",
   "advancement.eclipserealms.eclipse_armor": "Clad in Shadow",
-  "advancement.eclipserealms.eclipse_armor.desc": "Forge a piece of Eclipse armor"
+  "advancement.eclipserealms.eclipse_armor.desc": "Forge a piece of Eclipse armor",
+  "gui.eclipserealms.recipes.stand": "Stand",
+  "gui.eclipserealms.recipes.crafting": "Crafting",
+  "gui.eclipserealms.recipes.select": "Pick a recipe above",
+  "gui.eclipserealms.recipes.crafting_hint": "Made on a Crafting Table",
+  "gui.eclipserealms.recipes.click_to_fill": "Click to fill the stand",
+  "gui.eclipserealms.recipes.missing": "Missing ingredients"
 }

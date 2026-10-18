@@ -77,5 +77,11 @@
   "advancement.eclipserealms.eclipse_stand": "Dövme Sunağı",
   "advancement.eclipserealms.eclipse_stand.desc": "Bir Tutulma Tezgâhı üret",
   "advancement.eclipserealms.eclipse_armor": "Gölgeye Bürünmüş",
-  "advancement.eclipserealms.eclipse_armor.desc": "Bir Tutulma zırhı parçası döv"
+  "advancement.eclipserealms.eclipse_armor.desc": "Bir Tutulma zırhı parçası döv",
+  "gui.eclipserealms.recipes.stand": "Tezgâh",
+  "gui.eclipserealms.recipes.crafting": "Üretim",
+  "gui.eclipserealms.recipes.select": "Yukarıdan bir tarif seç",
+  "gui.eclipserealms.recipes.crafting_hint": "Üretim Masasında yapılır",
+  "gui.eclipserealms.recipes.click_to_fill": "Tezgâhı doldurmak için tıkla",
+  "gui.eclipserealms.recipes.missing": "Eksik malzemeler"
 }

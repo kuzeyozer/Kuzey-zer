@@ -87,6 +87,13 @@ B B B      B = Umbral Bricks, O = Obsidian
 
 Right-click it, then fill the three slots in order: **Base**, **Gem**, **Material**. Take the result from the right-hand slot. Enchantments on the base item carry over to the result.
 
+The stand has a **recipe book** panel on its left with two tabs:
+
+- **Stand** lists every forging recipe. Hover a recipe to see what it needs, and click it to move the ingredients from your inventory into the slots. Recipes you have everything for are highlighted.
+- **Crafting** lists the mod's crafting table recipes. Click one to see its 3×3 pattern.
+
+The mod's crafting table recipes also unlock in the normal crafting table's recipe book once you pick up one of their ingredients.
+
 ### Weapons
 
 | Result | Base | Gem | Material |

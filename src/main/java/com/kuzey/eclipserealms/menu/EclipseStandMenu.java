@@ -14,6 +14,7 @@ import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.inventory.ResultContainer;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.enchantment.ItemEnchantments;
 
 import java.util.Optional;
@@ -100,6 +101,55 @@ public class EclipseStandMenu extends AbstractContainerMenu {
 		});
 		access.execute((level, pos) -> level.playSound(null, pos, SoundEvents.SMITHING_TABLE_USE, SoundSource.BLOCKS, 1.0F,
 				0.7F + level.random.nextFloat() * 0.2F));
+	}
+
+	/**
+	 * Called (server side) when the player clicks a recipe in the stand's recipe book: returns whatever is in the
+	 * input slots and pulls the recipe's ingredients out of the player's inventory instead.
+	 */
+	@Override
+	public boolean clickMenuButton(Player player, int id) {
+		if (id < 0 || id >= StandRecipes.all().size()) {
+			return false;
+		}
+		StandRecipe recipe = StandRecipes.all().get(id);
+		for (int slot = BASE_SLOT; slot <= MATERIAL_SLOT; slot++) {
+			ItemStack previous = inputs.removeItemNoUpdate(slot);
+			if (!previous.isEmpty()) {
+				player.getInventory().placeItemBackInInventory(previous);
+			}
+		}
+		fillFromInventory(player, BASE_SLOT, recipe.base(), 1);
+		fillFromInventory(player, GEM_SLOT, recipe.gem(), recipe.gemCount());
+		fillFromInventory(player, MATERIAL_SLOT, recipe.material(), recipe.materialCount());
+		slotsChanged(inputs);
+		return true;
+	}
+
+	private void fillFromInventory(Player player, int slot, Ingredient ingredient, int count) {
+		Inventory inventory = player.getInventory();
+		for (int i = 0; i < inventory.items.size() && count > 0; i++) {
+			ItemStack stack = inventory.items.get(i);
+			if (stack.isEmpty() || !ingredient.test(stack)) {
+				continue;
+			}
+			ItemStack current = inputs.getItem(slot);
+			if (!current.isEmpty() && !ItemStack.isSameItemSameComponents(current, stack)) {
+				continue;
+			}
+			ItemStack taken = stack.split(Math.min(count, stack.getCount()));
+			count -= taken.getCount();
+			if (current.isEmpty()) {
+				inputs.setItem(slot, taken);
+			} else {
+				current.grow(taken.getCount());
+			}
+		}
+	}
+
+	/** The item currently in one of the three input slots (used by the recipe book to count what the player has). */
+	public ItemStack getInput(int slot) {
+		return inputs.getItem(slot);
 	}
 
 	@Override
