@@ -20,6 +20,7 @@ public final class ModCreativeTab {
 				.icon(() -> new ItemStack(ModItems.ECLIPSE_GREATSWORD))
 				.displayItems((parameters, output) -> {
 					output.accept(ModBlocks.ECLIPSE_PORTAL);
+					output.accept(ModBlocks.ECLIPSE_STAND);
 					output.accept(ModItems.VOIDBLADE);
 					output.accept(ModItems.FROSTFANG_DAGGER);
 					output.accept(ModItems.ECLIPSE_GREATSWORD);
@@ -27,6 +28,14 @@ public final class ModCreativeTab {
 					output.accept(ModItems.EMBER_SCYTHE);
 					output.accept(ModItems.VOID_STAFF);
 					output.accept(ModItems.EMBER_STAFF);
+					output.accept(ModItems.VOID_CRYSTAL_HELMET);
+					output.accept(ModItems.VOID_CRYSTAL_CHESTPLATE);
+					output.accept(ModItems.VOID_CRYSTAL_LEGGINGS);
+					output.accept(ModItems.VOID_CRYSTAL_BOOTS);
+					output.accept(ModItems.ECLIPSE_HELMET);
+					output.accept(ModItems.ECLIPSE_CHESTPLATE);
+					output.accept(ModItems.ECLIPSE_LEGGINGS);
+					output.accept(ModItems.ECLIPSE_BOOTS);
 					output.accept(ModItems.VOID_CRYSTAL_SHARD);
 					output.accept(ModItems.ECLIPSE_INGOT);
 					output.accept(ModBlocks.UMBRAL_STONE);

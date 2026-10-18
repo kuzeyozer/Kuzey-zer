@@ -1,9 +1,11 @@
 package com.kuzey.eclipserealms;
 
+import com.kuzey.eclipserealms.registry.ModArmorMaterials;
 import com.kuzey.eclipserealms.registry.ModBlocks;
 import com.kuzey.eclipserealms.registry.ModCreativeTab;
 import com.kuzey.eclipserealms.registry.ModEntities;
 import com.kuzey.eclipserealms.registry.ModItems;
+import com.kuzey.eclipserealms.registry.ModMenus;
 import com.kuzey.eclipserealms.registry.ModPoi;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.resources.ResourceLocation;
@@ -21,8 +23,10 @@ public class EclipseRealms implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModBlocks.init();
+		ModArmorMaterials.init();
 		ModEntities.init();
 		ModItems.init();
+		ModMenus.init();
 		ModPoi.init();
 		ModCreativeTab.init();
 		LOGGER.info("The eclipse has begun.");

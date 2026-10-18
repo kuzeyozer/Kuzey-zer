@@ -3,11 +3,14 @@ package com.kuzey.eclipserealms.client;
 import com.kuzey.eclipserealms.client.renderer.EmberFiendRenderer;
 import com.kuzey.eclipserealms.client.renderer.UmbralStalkerRenderer;
 import com.kuzey.eclipserealms.client.renderer.VoidWispRenderer;
+import com.kuzey.eclipserealms.client.screen.EclipseStandScreen;
 import com.kuzey.eclipserealms.registry.ModBlocks;
 import com.kuzey.eclipserealms.registry.ModEntities;
+import com.kuzey.eclipserealms.registry.ModMenus;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.RenderType;
 
 public class EclipseRealmsClient implements ClientModInitializer {
@@ -21,5 +24,7 @@ public class EclipseRealmsClient implements ClientModInitializer {
 		EntityRendererRegistry.register(ModEntities.UMBRAL_STALKER, UmbralStalkerRenderer::new);
 		EntityRendererRegistry.register(ModEntities.EMBER_FIEND, EmberFiendRenderer::new);
 		EntityRendererRegistry.register(ModEntities.VOID_WISP, VoidWispRenderer::new);
+
+		MenuScreens.register(ModMenus.ECLIPSE_STAND, EclipseStandScreen::new);
 	}
 }

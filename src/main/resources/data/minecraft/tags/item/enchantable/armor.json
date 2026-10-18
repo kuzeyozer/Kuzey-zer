@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "eclipserealms:void_crystal_helmet",
+    "eclipserealms:eclipse_helmet",
+    "eclipserealms:void_crystal_chestplate",
+    "eclipserealms:eclipse_chestplate",
+    "eclipserealms:void_crystal_leggings",
+    "eclipserealms:eclipse_leggings",
+    "eclipserealms:void_crystal_boots",
+    "eclipserealms:eclipse_boots"
+  ]
+}

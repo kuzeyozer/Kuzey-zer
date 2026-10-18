@@ -2,6 +2,7 @@ package com.kuzey.eclipserealms.registry;
 
 import com.kuzey.eclipserealms.EclipseRealms;
 import com.kuzey.eclipserealms.block.EclipsePortalBlock;
+import com.kuzey.eclipserealms.block.EclipseStandBlock;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -64,6 +65,9 @@ public final class ModBlocks {
 			new AmethystClusterBlock(6.0F, 4.0F, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_LIGHT_BLUE)
 					.forceSolidOn().noOcclusion().noCollission().sound(SoundType.WET_GRASS).instabreak()
 					.lightLevel(state -> 12).pushReaction(PushReaction.DESTROY)));
+	public static final Block ECLIPSE_STAND = register("eclipse_stand",
+			new EclipseStandBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PURPLE).strength(3.0F, 9.0F)
+					.requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_BRICKS).lightLevel(state -> 7)), Rarity.RARE);
 	public static final Block ECLIPSE_PORTAL = register("eclipse_portal",
 			new EclipsePortalBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).strength(5.0F, 1200.0F)
 					.noCollission().noOcclusion().lightLevel(state -> 12).sound(SoundType.GLASS)

@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "id": "eclipserealms:eclipse_stand"
+    },
+    "title": {
+      "translate": "advancement.eclipserealms.eclipse_stand"
+    },
+    "description": {
+      "translate": "advancement.eclipserealms.eclipse_stand.desc"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "stand": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "eclipserealms:eclipse_stand"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "eclipserealms:void_crystal"
+}

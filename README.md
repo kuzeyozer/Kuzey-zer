@@ -75,12 +75,62 @@ The biomes are `duskwood_forest`, `crystal_spires`, `glowshroom_marsh`, `ashen_w
 
 Abilities have cooldowns and use durability. All weapons can be enchanted.
 
+## Eclipse Stand (forging)
+
+All weapons and armor are forged at the **Eclipse Stand**, a workstation like the loom or smithing table. Craft it on a crafting table:
+
+```
+V L V      V = Void Crystal Shard
+B O B      L = Luminite Cluster
+B B B      B = Umbral Bricks, O = Obsidian
+```
+
+Right-click it, then fill the three slots in order: **Base**, **Gem**, **Material**. Take the result from the right-hand slot. Enchantments on the base item carry over to the result.
+
+### Weapons
+
+| Result | Base | Gem | Material |
+|---|---|---|---|
+| Voidblade | Iron Sword | 4 Void Crystal Shards | 1 Luminite Cluster |
+| Frostfang Dagger | Iron Sword | 3 Void Crystal Shards | 2 Blue Ice |
+| Eclipse Greatsword | Diamond Sword | 4 Void Crystal Shards | 3 Eclipse Ingots |
+| Stormbreaker | Diamond Axe | 4 Luminite Clusters | 3 Eclipse Ingots |
+| Ember Scythe | Diamond Hoe | 2 Luminite Clusters | 3 Eclipse Ingots |
+| Void Staff | Blaze Rod | 6 Void Crystal Shards | 1 Eclipse Ingot |
+| Ember Staff | Blaze Rod | 2 Luminite Clusters | 4 Fire Charges |
+
+### Armor
+
+**Void Crystal armor** (better than diamond). Full set bonus: Night Vision and Speed.
+
+| Result | Base | Gem | Material |
+|---|---|---|---|
+| Void Crystal Helmet | Iron Helmet | 5 Void Crystal Shards | 1 Luminite Cluster |
+| Void Crystal Chestplate | Iron Chestplate | 8 Void Crystal Shards | 1 Luminite Cluster |
+| Void Crystal Leggings | Iron Leggings | 7 Void Crystal Shards | 1 Luminite Cluster |
+| Void Crystal Boots | Iron Boots | 4 Void Crystal Shards | 1 Luminite Cluster |
+
+**Eclipse armor** (better than netherite, fireproof), made by upgrading Void Crystal armor. Full set bonus: Night Vision, Strength, Resistance and Fire Resistance.
+
+| Result | Base | Gem | Material |
+|---|---|---|---|
+| Eclipse Helmet | Void Crystal Helmet | 2 Luminite Clusters | 3 Eclipse Ingots |
+| Eclipse Chestplate | Void Crystal Chestplate | 2 Luminite Clusters | 5 Eclipse Ingots |
+| Eclipse Leggings | Void Crystal Leggings | 2 Luminite Clusters | 4 Eclipse Ingots |
+| Eclipse Boots | Void Crystal Boots | 2 Luminite Clusters | 2 Eclipse Ingots |
+
+| Armor | Helmet | Chest | Legs | Boots | Toughness | Knockback resistance |
+|---|---|---|---|---|---|---|
+| Void Crystal | 3 | 7 | 6 | 3 | 2 | 0 |
+| Eclipse | 4 | 9 | 7 | 4 | 4 | 15% |
+
 ## Progression
 
 1. Build an Eclipse Portal in the Overworld.
-2. Mine **Void Crystal Ore** in the Eclipse (iron pickaxe or better) for **Void Crystal Shards**.
-3. Collect **Luminite Clusters**. Combine 4 shards, 4 gold ingots and 1 luminite cluster into an **Eclipse Ingot**.
-4. Forge the weapons (check JEI/REI or the recipe book). The Ember Staff can be crafted in the Overworld from blaze materials.
+2. Mine **Void Crystal Ore** in the Eclipse (iron pickaxe or better) for **Void Crystal Shards**. Collect **Luminite Clusters**.
+3. Craft an **Eclipse Stand**.
+4. Combine 4 shards, 4 gold ingots and 1 luminite cluster on a crafting table to make an **Eclipse Ingot**.
+5. Forge weapons and armor at the Eclipse Stand.
 
 Other blocks: Abyssal Sand, Bricks, Coral and Anemones (ocean blocks), Umbral Stone and Bricks, Duskmoss, Ash, Starlight Logs, Planks and Leaves, and Void Crystal Blocks. English and Turkish translations are included.
 

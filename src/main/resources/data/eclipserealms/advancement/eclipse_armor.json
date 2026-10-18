@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "eclipserealms:eclipse_chestplate"
+    },
+    "title": {
+      "translate": "advancement.eclipserealms.eclipse_armor"
+    },
+    "description": {
+      "translate": "advancement.eclipserealms.eclipse_armor.desc"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "armor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "eclipserealms:eclipse_helmet",
+              "eclipserealms:eclipse_chestplate",
+              "eclipserealms:eclipse_leggings",
+              "eclipserealms:eclipse_boots"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "parent": "eclipserealms:eclipse_ingot"
+}
