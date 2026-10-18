@@ -51,6 +51,19 @@ public final class ModBlocks {
 			new AmethystClusterBlock(7.0F, 3.0F, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_CYAN)
 					.forceSolidOn().noOcclusion().sound(SoundType.AMETHYST_CLUSTER).strength(1.5F)
 					.lightLevel(state -> 10).pushReaction(PushReaction.DESTROY)));
+	public static final Block ABYSSAL_SAND = register("abyssal_sand",
+			new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLUE).strength(0.5F)
+					.sound(SoundType.SAND)));
+	public static final Block ABYSSAL_BRICKS = register("abyssal_bricks",
+			new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLUE).strength(2.0F, 6.0F)
+					.requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE_BRICKS)));
+	public static final Block ABYSSAL_CORAL_BLOCK = register("abyssal_coral_block",
+			new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_CYAN).strength(1.5F, 6.0F)
+					.requiresCorrectToolForDrops().sound(SoundType.CORAL_BLOCK).lightLevel(state -> 8)));
+	public static final Block ABYSSAL_ANEMONE = register("abyssal_anemone",
+			new AmethystClusterBlock(6.0F, 4.0F, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_LIGHT_BLUE)
+					.forceSolidOn().noOcclusion().noCollission().sound(SoundType.WET_GRASS).instabreak()
+					.lightLevel(state -> 12).pushReaction(PushReaction.DESTROY)));
 	public static final Block ECLIPSE_PORTAL = register("eclipse_portal",
 			new EclipsePortalBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).strength(5.0F, 1200.0F)
 					.noCollission().noOcclusion().lightLevel(state -> 12).sound(SoundType.GLASS)

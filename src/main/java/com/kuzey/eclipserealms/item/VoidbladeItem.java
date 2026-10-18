@@ -22,7 +22,7 @@ import java.util.List;
 
 /** Life-stealing crystal sword. Right-click to blink forward through the void. */
 public class VoidbladeItem extends SwordItem {
-	private static final double BLINK_DISTANCE = 8.0;
+	private static final double BLINK_DISTANCE = 12.0;
 
 	public VoidbladeItem(Tier tier, Properties properties) {
 		super(tier, properties);
@@ -30,8 +30,8 @@ public class VoidbladeItem extends SwordItem {
 
 	@Override
 	public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-		attacker.heal(1.5F);
-		if (attacker.getRandom().nextFloat() < 0.25F) {
+		attacker.heal(3.0F);
+		if (attacker.getRandom().nextFloat() < 0.4F) {
 			target.addEffect(new MobEffectInstance(MobEffects.WITHER, 60, 1), attacker);
 		}
 		if (attacker.level() instanceof ServerLevel level) {
@@ -64,7 +64,7 @@ public class VoidbladeItem extends SwordItem {
 			level.playSound(null, target.x, target.y, target.z, SoundEvents.ENDERMAN_TELEPORT, SoundSource.PLAYERS, 1.0F, 1.2F);
 			stack.hurtAndBreak(2, player, LivingEntity.getSlotForHand(hand));
 		}
-		player.getCooldowns().addCooldown(this, 60);
+		player.getCooldowns().addCooldown(this, 40);
 		return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());
 	}
 

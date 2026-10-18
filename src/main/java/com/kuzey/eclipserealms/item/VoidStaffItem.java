@@ -34,7 +34,7 @@ public class VoidStaffItem extends Item {
 					SoundSource.PLAYERS, 0.6F, 1.4F);
 			stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(hand));
 		}
-		player.getCooldowns().addCooldown(this, 20);
+		player.getCooldowns().addCooldown(this, 12);
 		return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());
 	}
 

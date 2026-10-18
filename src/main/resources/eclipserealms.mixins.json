@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "com.kuzey.eclipserealms.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"SpawnPlacementsInvoker"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

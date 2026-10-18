@@ -33,8 +33,14 @@
   "spawners": {
     "monster": [
       {
+        "type": "eclipserealms:ember_fiend",
+        "weight": 35,
+        "minCount": 1,
+        "maxCount": 2
+      },
+      {
         "type": "minecraft:blaze",
-        "weight": 30,
+        "weight": 20,
         "minCount": 1,
         "maxCount": 3
       },

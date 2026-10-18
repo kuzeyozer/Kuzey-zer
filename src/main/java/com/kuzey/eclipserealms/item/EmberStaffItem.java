@@ -16,9 +16,9 @@ import net.minecraft.world.phys.Vec3;
 
 import java.util.List;
 
-/** Sprays a fan of three fireballs. */
+/** Sprays a fan of five fireballs. */
 public class EmberStaffItem extends Item {
-	private static final float SPREAD = (float) Math.toRadians(12.0);
+	private static final float SPREAD = (float) Math.toRadians(10.0);
 
 	public EmberStaffItem(Properties properties) {
 		super(properties);
@@ -29,7 +29,7 @@ public class EmberStaffItem extends Item {
 		ItemStack stack = player.getItemInHand(hand);
 		if (!level.isClientSide) {
 			Vec3 look = player.getLookAngle();
-			for (int i = -1; i <= 1; i++) {
+			for (int i = -2; i <= 2; i++) {
 				Vec3 dir = look.yRot(SPREAD * i);
 				SmallFireball fireball = new SmallFireball(level, player, dir);
 				fireball.setPos(player.getX() + dir.x * 1.2, player.getEyeY() - 0.1 + dir.y * 1.2, player.getZ() + dir.z * 1.2);
@@ -39,7 +39,7 @@ public class EmberStaffItem extends Item {
 					SoundSource.PLAYERS, 1.0F, 1.2F);
 			stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(hand));
 		}
-		player.getCooldowns().addCooldown(this, 25);
+		player.getCooldowns().addCooldown(this, 18);
 		return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());
 	}
 

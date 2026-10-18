@@ -2,6 +2,7 @@ package com.kuzey.eclipserealms;
 
 import com.kuzey.eclipserealms.registry.ModBlocks;
 import com.kuzey.eclipserealms.registry.ModCreativeTab;
+import com.kuzey.eclipserealms.registry.ModEntities;
 import com.kuzey.eclipserealms.registry.ModItems;
 import com.kuzey.eclipserealms.registry.ModPoi;
 import net.fabricmc.api.ModInitializer;
@@ -20,6 +21,7 @@ public class EclipseRealms implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModBlocks.init();
+		ModEntities.init();
 		ModItems.init();
 		ModPoi.init();
 		ModCreativeTab.init();

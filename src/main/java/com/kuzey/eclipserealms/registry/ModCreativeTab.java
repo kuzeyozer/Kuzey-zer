@@ -39,6 +39,13 @@ public final class ModCreativeTab {
 					output.accept(ModBlocks.VOID_CRYSTAL_ORE);
 					output.accept(ModBlocks.VOID_CRYSTAL_BLOCK);
 					output.accept(ModBlocks.LUMINITE_CLUSTER);
+					output.accept(ModBlocks.ABYSSAL_SAND);
+					output.accept(ModBlocks.ABYSSAL_BRICKS);
+					output.accept(ModBlocks.ABYSSAL_CORAL_BLOCK);
+					output.accept(ModBlocks.ABYSSAL_ANEMONE);
+					output.accept(ModItems.UMBRAL_STALKER_SPAWN_EGG);
+					output.accept(ModItems.EMBER_FIEND_SPAWN_EGG);
+					output.accept(ModItems.VOID_WISP_SPAWN_EGG);
 				})
 				.build());
 	}

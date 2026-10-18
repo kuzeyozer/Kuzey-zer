@@ -22,7 +22,7 @@ import java.util.List;
 
 /** Massive blade forged from eclipse metal. Right-click unleashes a shockwave. */
 public class EclipseGreatswordItem extends SwordItem {
-	private static final double RADIUS = 6.0;
+	private static final double RADIUS = 8.0;
 
 	public EclipseGreatswordItem(Tier tier, Properties properties) {
 		super(tier, properties);
@@ -33,7 +33,7 @@ public class EclipseGreatswordItem extends SwordItem {
 		// Darkness strikes harder: bonus damage against anything below half health.
 		if (target.getHealth() < target.getMaxHealth() / 2) {
 			target.invulnerableTime = 0;
-			target.hurt(attacker.damageSources().magic(), 4.0F);
+			target.hurt(attacker.damageSources().magic(), 8.0F);
 		}
 		return super.hurtEnemy(stack, target, attacker);
 	}
@@ -44,9 +44,9 @@ public class EclipseGreatswordItem extends SwordItem {
 		if (!level.isClientSide) {
 			ServerLevel serverLevel = (ServerLevel) level;
 			for (LivingEntity target : WeaponEffects.enemiesAround(level, player, RADIUS)) {
-				target.hurt(player.damageSources().playerAttack(player), 10.0F);
+				target.hurt(player.damageSources().playerAttack(player), 18.0F);
 				Vec3 away = target.position().subtract(player.position()).normalize();
-				target.knockback(1.6, -away.x, -away.z);
+				target.knockback(2.2, -away.x, -away.z);
 				target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 100, 1), player);
 			}
 			for (double r = 1.5; r <= RADIUS; r += 1.5) {
@@ -59,7 +59,7 @@ public class EclipseGreatswordItem extends SwordItem {
 					SoundSource.PLAYERS, 1.0F, 1.3F);
 			stack.hurtAndBreak(5, player, LivingEntity.getSlotForHand(hand));
 		}
-		player.getCooldowns().addCooldown(this, 160);
+		player.getCooldowns().addCooldown(this, 120);
 		return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());
 	}
 

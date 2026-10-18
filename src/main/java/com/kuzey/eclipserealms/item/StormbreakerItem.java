@@ -33,9 +33,9 @@ public class StormbreakerItem extends SwordItem {
 	@Override
 	public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
 		target.setDeltaMovement(target.getDeltaMovement().add(0.0, 0.35, 0.0));
-		if (attacker.getRandom().nextFloat() < 0.3F) {
+		if (attacker.getRandom().nextFloat() < 0.5F) {
 			target.invulnerableTime = 0;
-			target.hurt(attacker.damageSources().lightningBolt(), 3.0F);
+			target.hurt(attacker.damageSources().lightningBolt(), 6.0F);
 		}
 		if (attacker.level() instanceof ServerLevel level) {
 			level.sendParticles(ParticleTypes.ELECTRIC_SPARK, target.getX(), target.getY(0.5), target.getZ(),
@@ -53,17 +53,21 @@ public class StormbreakerItem extends SwordItem {
 		}
 		if (!level.isClientSide) {
 			BlockPos target = ((BlockHitResult) hit).getBlockPos().above();
-			LightningBolt bolt = EntityType.LIGHTNING_BOLT.create(level);
-			if (bolt != null) {
-				bolt.moveTo(Vec3.atBottomCenterOf(target));
-				if (player instanceof ServerPlayer serverPlayer) {
-					bolt.setCause(serverPlayer);
+			// A storm of three bolts: one on the target and two around it.
+			BlockPos[] strikes = {target, target.offset(2, 0, 1), target.offset(-1, 0, -2)};
+			for (BlockPos strike : strikes) {
+				LightningBolt bolt = EntityType.LIGHTNING_BOLT.create(level);
+				if (bolt != null) {
+					bolt.moveTo(Vec3.atBottomCenterOf(strike));
+					if (player instanceof ServerPlayer serverPlayer) {
+						bolt.setCause(serverPlayer);
+					}
+					level.addFreshEntity(bolt);
 				}
-				level.addFreshEntity(bolt);
 			}
 			stack.hurtAndBreak(3, player, LivingEntity.getSlotForHand(hand));
 		}
-		player.getCooldowns().addCooldown(this, 100);
+		player.getCooldowns().addCooldown(this, 80);
 		return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());
 	}
 

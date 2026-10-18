@@ -10,8 +10,8 @@ import net.minecraft.world.level.block.Block;
 import java.util.function.Supplier;
 
 public enum ModTiers implements Tier {
-	VOID_CRYSTAL(1800, 9.0F, 4.0F, 18, () -> ModItems.VOID_CRYSTAL_SHARD),
-	ECLIPSE(2600, 10.0F, 5.0F, 22, () -> ModItems.ECLIPSE_INGOT);
+	VOID_CRYSTAL(2400, 9.0F, 6.0F, 18, () -> ModItems.VOID_CRYSTAL_SHARD),
+	ECLIPSE(3600, 10.0F, 8.0F, 22, () -> ModItems.ECLIPSE_INGOT);
 
 	private final int uses;
 	private final float speed;

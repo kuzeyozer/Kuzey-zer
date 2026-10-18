@@ -28,7 +28,7 @@ public class FrostfangDaggerItem extends SwordItem {
 
 	@Override
 	public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-		target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 60, 1), attacker);
+		target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 80, 2), attacker);
 		target.setTicksFrozen(Math.min(target.getTicksRequiredToFreeze() + 80, target.getTicksFrozen() + 50));
 		if (attacker.level() instanceof ServerLevel level) {
 			level.sendParticles(ParticleTypes.SNOWFLAKE, target.getX(), target.getY(0.5), target.getZ(),
@@ -42,7 +42,7 @@ public class FrostfangDaggerItem extends SwordItem {
 		ItemStack stack = player.getItemInHand(hand);
 		Vec3 look = player.getLookAngle();
 		// The client owns its own player's movement, so the dash is applied there.
-		player.setDeltaMovement(look.x * 1.6, Math.max(0.25, look.y * 0.8), look.z * 1.6);
+		player.setDeltaMovement(look.x * 2.2, Math.max(0.3, look.y * 1.0), look.z * 2.2);
 		player.resetFallDistance();
 		if (!level.isClientSide) {
 			((ServerLevel) level).sendParticles(ParticleTypes.SNOWFLAKE, player.getX(), player.getY() + 0.5, player.getZ(),
@@ -51,7 +51,7 @@ public class FrostfangDaggerItem extends SwordItem {
 					SoundSource.PLAYERS, 1.0F, 1.6F);
 			stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(hand));
 		}
-		player.getCooldowns().addCooldown(this, 50);
+		player.getCooldowns().addCooldown(this, 30);
 		return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());
 	}
 

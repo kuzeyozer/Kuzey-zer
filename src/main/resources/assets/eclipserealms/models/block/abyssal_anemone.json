@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "eclipserealms:block/abyssal_anemone"
+  }
+}

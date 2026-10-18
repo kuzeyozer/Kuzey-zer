@@ -19,7 +19,7 @@ import java.util.List;
 
 /** Burning scythe. Sets targets ablaze; right-click erupts an inferno ring around you. */
 public class EmberScytheItem extends SwordItem {
-	private static final double RADIUS = 5.0;
+	private static final double RADIUS = 7.0;
 
 	public EmberScytheItem(Tier tier, Properties properties) {
 		super(tier, properties);
@@ -27,7 +27,7 @@ public class EmberScytheItem extends SwordItem {
 
 	@Override
 	public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-		target.igniteForSeconds(5.0F);
+		target.igniteForSeconds(8.0F);
 		if (attacker.level() instanceof ServerLevel level) {
 			level.sendParticles(ParticleTypes.FLAME, target.getX(), target.getY(0.5), target.getZ(),
 					12, 0.3, 0.4, 0.3, 0.03);
@@ -41,8 +41,8 @@ public class EmberScytheItem extends SwordItem {
 		if (!level.isClientSide) {
 			ServerLevel serverLevel = (ServerLevel) level;
 			for (LivingEntity target : WeaponEffects.enemiesAround(level, player, RADIUS)) {
-				target.hurt(player.damageSources().playerAttack(player), 6.0F);
-				target.igniteForSeconds(8.0F);
+				target.hurt(player.damageSources().playerAttack(player), 12.0F);
+				target.igniteForSeconds(12.0F);
 			}
 			for (double r = 1.0; r <= RADIUS; r += 1.0) {
 				WeaponEffects.ring(serverLevel, ParticleTypes.FLAME, player.getX(), player.getY() + 0.1,
@@ -54,7 +54,7 @@ public class EmberScytheItem extends SwordItem {
 					SoundSource.PLAYERS, 1.2F, 0.7F);
 			stack.hurtAndBreak(4, player, LivingEntity.getSlotForHand(hand));
 		}
-		player.getCooldowns().addCooldown(this, 140);
+		player.getCooldowns().addCooldown(this, 100);
 		return InteractionResultHolder.sidedSuccess(stack, level.isClientSide());
 	}
 
